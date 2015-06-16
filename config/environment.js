@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'demo-app-wip',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://shining-inferno-8972.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
