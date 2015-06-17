@@ -1,0 +1,7 @@
+body {
+  padding: 2em 4em;
+}
+
+a.active {
+  font-weight: bold;
+}
