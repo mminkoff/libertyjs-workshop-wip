@@ -4,7 +4,12 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'demo-app-wip',
     environment: environment,
-    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    contentSecurityPolicy: {
+      'connect-src': "'self' wss://*.firebaseio.com",
+      'style-src': "self http://localhost:4200 http://fonts.googleapis.com/",
+      'font-src': "self http://localhost:4200 http://fonts.gstatic.com/",
+
+    },
     firebase: 'https://shining-inferno-8972.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
