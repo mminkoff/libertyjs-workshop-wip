@@ -8,7 +8,9 @@ module.exports = function(environment) {
       'connect-src': "'self' wss://*.firebaseio.com",
       'style-src': "self http://localhost:4200 http://fonts.googleapis.com/",
       'font-src': "self http://localhost:4200 http://fonts.gstatic.com/",
-      'img-src': "self ow.ly https://www.filepicker.io"
+      'img-src': "self ow.ly https://www.filepicker.io https://s3.amazonaws.com",
+      'script-src': "self http://api.filepicker.io http://localhost:4200/",
+      'frame-src': "self http://dialog.filepicker.io https://www.filepicker.io"
     },
     firebase: 'https://shining-inferno-8972.firebaseio.com/',
     filepickerKey: 'AZ6sXjNISRmv580NSLBzgz',
