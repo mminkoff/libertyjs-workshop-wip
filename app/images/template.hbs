@@ -3,7 +3,12 @@ Here are my things
 <ul class="list-group">
   {{#each model as |image|}}
     <li class="list-group-item">
-      <img src="{{image.url}}">
+      <p>
+        <img src={{image.url}}>
+      </p>
+      <p>
+        {{image.caption}}
+      </p>
     </li>
   {{/each}}
 </ul>
