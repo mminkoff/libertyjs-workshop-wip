@@ -18,6 +18,10 @@ export default Ember.Route.extend({
     saveImage: function() {
       this.controller.get('model').save();
       this.transitionTo('images');
+    },
+    cancel: function() {
+      this.controller.get('model').deleteRecord();
+      this.transitionTo('images');
     }
   }
 });
