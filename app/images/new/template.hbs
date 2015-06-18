@@ -3,4 +3,5 @@
     <label for="url">Url</label>
     {{input name="url" value=model.url}}
   </div>
+  {{ember-filepicker pickerOptions=pickerOptions onSelection='fileSelected' onClose='onClose' onError='onError'}}
 </form>

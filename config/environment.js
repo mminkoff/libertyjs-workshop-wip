@@ -11,6 +11,7 @@ module.exports = function(environment) {
       'img-src': "self ow.ly https://www.filepicker.io"
     },
     firebase: 'https://shining-inferno-8972.firebaseio.com/',
+    filepickerKey: 'AZ6sXjNISRmv580NSLBzgz',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
