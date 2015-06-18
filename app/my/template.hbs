@@ -1,3 +1,10 @@
 Here are my things
 
+<ul class="list-group">
+  {{#each model as |image|}}
+    <li class="list-group-item">
+      <img src="{{image.url}}">
+    </li>
+  {{/each}}
+</ul>
 {{outlet}}
