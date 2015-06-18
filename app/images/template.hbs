@@ -3,7 +3,9 @@
 <div class="images">
   <ul class="list-group">
     {{#each savedImages as |image|}}
-      {{my-image image=image tagName="li" thumb=true}}
+      {{#link-to 'images.show' image}}
+        {{my-image image=image tagName="li" thumb=true}}
+      {{/link-to}}
     {{/each}}
   </ul>
 </div>
