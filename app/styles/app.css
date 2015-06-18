@@ -1,4 +1,4 @@
-body {
+body > .ember-view {
   padding: 2em 4em;
 }
 

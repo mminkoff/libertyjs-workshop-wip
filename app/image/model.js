@@ -11,7 +11,7 @@ export default DS.Model.extend({
     var u = this.get('url');
 
     if (u) {
-      if(u.indexOf('convert') == -1) {
+      if(u.indexOf('convert') === -1) {
         return u + '/convert?width=120';
       } else {
         return u + '&width=120';
