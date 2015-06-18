@@ -8,6 +8,16 @@ export default Ember.Route.extend({
   actions: {
     fileSelected: function(fileBlob) {
       this.controller.set('model.url',fileBlob.url);
+    },
+    openPicker: function(){
+      this.controller.set('picker',true);
+    },
+    onClose: function(){
+      this.controller.set('picker',false);
+    },
+    saveImage: function() {
+      this.controller.get('model').save();
+      this.transitionTo('images');
     }
   }
 });
