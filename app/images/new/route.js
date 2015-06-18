@@ -8,6 +8,7 @@ export default Ember.Route.extend({
   actions: {
     fileSelected: function(fileBlob) {
       this.controller.set('model.url',fileBlob.url);
+      this.controller.set('picker',false);
     },
     openPicker: function(){
       this.controller.set('picker',true);

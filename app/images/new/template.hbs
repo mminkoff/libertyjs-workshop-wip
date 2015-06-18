@@ -1,3 +1,7 @@
+{{#if model.url}}
+  {{my-image image=model tagName="li"}}
+{{/if}}
+
 <form class="image form-horizontal">
   <fieldset>
     <div class="form-group">
@@ -13,7 +17,7 @@
 
 <button type="reset" class="btn btn-default" {{action 'cancel'}}>cancel</button>
 <button class="btn btn-info" {{action 'openPicker'}}>open picker</button>
+<button type="submit" class="btn btn-primary" {{action 'saveImage'}}>save</button>
 {{#if picker}}
   {{ember-filepicker pickerOptions=pickerOptions onSelection='fileSelected' onClose='onClose' onError='onError'}}
 {{/if}}
-<button type="submit" class="btn btn-primary" {{action 'saveImage'}}>save</button>
