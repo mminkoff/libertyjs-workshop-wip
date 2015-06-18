@@ -14,11 +14,20 @@ test('it exists', function(assert) {
 
 test('it provides a thumbUrl', function(assert) {
   var model = this.subject();
-  var baseUrl = 'http://foo.bar/baz/convert?crop=1,2,3,4';
+  var baseUrl = 'http://foo.bar/baz';
+  var baseUrlCropped =  baseUrl + '/convert?crop=1,2,3,4';
+
+  assert.equal(model.get('thumbUrl'),'');
 
   Ember.run( function() {
     model.set('url',baseUrl);
   });
 
-  assert.equal(model.get('thumbUrl'),baseUrl + '&width=120');
+  assert.equal(model.get('thumbUrl'),baseUrl + '/convert?width=120');
+
+  Ember.run( function() {
+    model.set('url',baseUrlCropped);
+  });
+
+  assert.equal(model.get('thumbUrl'),baseUrlCropped + '&width=120');
 });

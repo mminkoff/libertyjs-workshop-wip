@@ -9,6 +9,15 @@ export default DS.Model.extend({
 
   thumbUrl: Ember.computed('url',function() {
     var u = this.get('url');
-    return u + '&width=120';
+
+    if (u) {
+      if(u.indexOf('convert') == -1) {
+        return u + '/convert?width=120';
+      } else {
+        return u + '&width=120';
+      }
+    } else {
+      return '';
+    }
   })
 });
