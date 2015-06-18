@@ -2,14 +2,7 @@ Here are my things
 
 <ul class="list-group">
   {{#each model as |image|}}
-    <li class="list-group-item">
-      <p>
-        <img src={{image.url}}>
-      </p>
-      <p>
-        {{image.caption}}
-      </p>
-    </li>
+    {{my-image image=image tagName="li"}}
   {{/each}}
 </ul>
 {{outlet}}
