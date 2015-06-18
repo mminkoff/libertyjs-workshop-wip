@@ -6,7 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('my');
+  this.route('images', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
