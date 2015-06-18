@@ -5,3 +5,13 @@ body {
 a.active {
   font-weight: bold;
 }
+
+.images {
+  width: 160px;
+  float: left;
+}
+
+.main {
+  float: left;
+  margin-left: 40px;
+}
