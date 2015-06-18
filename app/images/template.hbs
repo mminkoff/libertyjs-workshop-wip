@@ -1,8 +1,8 @@
-Here are my things
+Here are my things - {{link-to 'make new one' 'images.new'}}
 
 <ul class="list-group">
   {{#each model as |image|}}
-    {{my-image image=image tagName="li"}}
+    {{my-image image=image tagName="li" thumb=true}}
   {{/each}}
 </ul>
 {{outlet}}
