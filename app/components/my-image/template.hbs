@@ -1,6 +1,8 @@
-<p>
-  <img src={{if thumb image.thumbUrl image.url}}>
-</p>
+{{#if url}}
+  <p>
+    <img src={{url}}>
+  </p>
+{{/if}}
 <p>
   {{image.caption}}
 </p>
