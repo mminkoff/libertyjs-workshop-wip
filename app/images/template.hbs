@@ -1,4 +1,8 @@
-<h4>Here are my things - {{link-to 'make new one' 'images.new'}}</h4>
+<h4>Here are my things
+  {{#link-to 'images.new'}}
+    {{fa-icon "plus"}}
+  {{/link-to}}
+</h4>
 
 <div class="images">
   <ul class="list-group">
